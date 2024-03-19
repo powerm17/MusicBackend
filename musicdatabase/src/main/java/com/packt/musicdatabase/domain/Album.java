@@ -1,9 +1,13 @@
 package com.packt.musicdatabase.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Album {
@@ -11,6 +15,9 @@ public class Album {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long albumid;
 	private String name;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "album")
+	private List<Music> songs;
 
 	public Album() {
 	}
@@ -34,6 +41,12 @@ public class Album {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	public List<Music> getSongs() {
+		return songs;
+	}
+	public void setSongs(List<Music> songs) {
+		this.songs = songs;
 	}
 
 }
