@@ -9,6 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
+
 @Entity
 public class Album {
 	@Id
@@ -17,6 +21,7 @@ public class Album {
 	private String name;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "album")
+	@JsonIgnore
 	private List<Music> songs;
 
 	public Album() {
