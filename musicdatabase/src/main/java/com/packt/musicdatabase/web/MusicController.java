@@ -12,8 +12,8 @@ public class MusicController {
 	@Autowired
 	private MusicRepository repository;
 	
-	@RequestMapping("/songs")
-	public Iterable<Music> getSongs() {
+	@RequestMapping("/musics")
+	public Iterable<Music> getMusics() {
 		return repository.findAll();
 	}
 

@@ -24,7 +24,7 @@ public class Album {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "album")
 	@JsonIgnore
-	private List<Music> songs;
+	private List<Music> musics;
 
 	public Album() {
 	}
@@ -49,11 +49,11 @@ public class Album {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Music> getSongs() {
-		return songs;
+	public List<Music> getMusics() {
+		return musics;
 	}
-	public void setSongs(List<Music> songs) {
-		this.songs = songs;
+	public void setMusics(List<Music> musics) {
+		this.musics = musics;
 	}
 
 }
