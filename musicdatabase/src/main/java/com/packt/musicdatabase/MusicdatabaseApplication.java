@@ -16,12 +16,14 @@ import com.packt.musicdatabase.domain.UserRepository;
 @SpringBootApplication
 public class MusicdatabaseApplication {
 	@Autowired 
-	private UserRepository urepository;
-	@Autowired
 	private MusicRepository repository;
 
 	@Autowired
 	private AlbumRepository arepository;
+	
+	@Autowired 
+	private UserRepository urepository;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(MusicdatabaseApplication.class, args);
@@ -46,15 +48,17 @@ public class MusicdatabaseApplication {
 			repository.save(new Music("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=&cad=rja&uact=8&ved=2ahUKEwiTwrTlnv-EAxXxC3kGHSbFBbsQtwJ6BAgNEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2XqpXmhM1Fc&usg=AOvVaw3XuF6JXScLFHP_oWU_hWAm&opi=89978449",
 					"Sparks", "Coldplay", "https://m.media-amazon.com/images/I/61-m2ApVV4L._UF1000,1000_QL80_.jpg",
 					2000, album1));
-			    
+			
 			// username: user password: user      
-			urepository.save(new User("user",      
-					"9da7115f-9174-4dcc-a059-cc5f7cb524ae",      
-					"USER"));      
-			// username: admin password: admin      
-			urepository.save(new User("admin",      
-					"9da7115f-9174-4dcc-a059-cc5f7cb524ae",       
-					"ADMIN"));    
+			urepository.save(new User("user",
+			"$2a$10$x/ApNAgivZGFl0yQjhQ4K./oW8CM4rmWruhG1PSV/XZ0VnDHtuX.i",
+			"USER"));
+			
+			// username: admin password: admin 
+			urepository.save(new User("admin",
+					"$2a$10$USSRQEf28hnYIYD8OkxRIOwt7X.35U2bqxbVuXPcddpgMGYTBljHS",
+					"ADMIN"));
+			    
 			};  
 		} 
 }

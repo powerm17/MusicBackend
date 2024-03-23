@@ -27,7 +27,8 @@ public class AuthenticationService {
 	static public Authentication getAuthentication(HttpServletRequest request) {
 		String token = request.getHeader("Authorization");
 		if (token != null) {
-			String user = Jwts.parser().setSigningKey(SIGNINGKEY).parseClaimsJws(token.replace(PREFIX, "")).getBody()
+			String user = Jwts.parser().setSigningKey(SIGNINGKEY)
+					.parseClaimsJws(token.replace(PREFIX, "")).getBody()
 					.getSubject();
 
 			if (user != null)
