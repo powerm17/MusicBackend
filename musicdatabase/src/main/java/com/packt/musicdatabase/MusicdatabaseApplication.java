@@ -33,9 +33,12 @@ public class MusicdatabaseApplication {
 		return args -> {
 			Album album1 = new Album("Parachutes");
 			Album album2 = new Album("Koi No Yokan");
+			Album album3 = new Album("Either/Or");
 			arepository.save(album1);
 			arepository.save(album2);
+			arepository.save(album3);
 
+			
 			
 			repository.save(new Music("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=&cad=rja&uact=8&ved=2ahUKEwiTwrTlnv-EAxXxC3kGHSbFBbsQtwJ6BAgNEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2XqpXmhM1Fc&usg=AOvVaw3XuF6JXScLFHP_oWU_hWAm&opi=89978449",
 					"Don't Panic", "Coldplay", "https://m.media-amazon.com/images/I/61-m2ApVV4L._UF1000,1000_QL80_.jpg",
@@ -48,6 +51,35 @@ public class MusicdatabaseApplication {
 			repository.save(new Music("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=&cad=rja&uact=8&ved=2ahUKEwiTwrTlnv-EAxXxC3kGHSbFBbsQtwJ6BAgNEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2XqpXmhM1Fc&usg=AOvVaw3XuF6JXScLFHP_oWU_hWAm&opi=89978449",
 					"Sparks", "Coldplay", "https://m.media-amazon.com/images/I/61-m2ApVV4L._UF1000,1000_QL80_.jpg",
 					2000, album1));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Speed Trials", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Alameda", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Ballad of Big Nothing", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Between the Bars", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Pictures of Me", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"Angeles", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			repository.save(new Music("https://youtu.be/WYrHbbMOzLA?si=tw-v4TuY-yZXdgFb",
+					"2:45 AM", "Elliott Smith","https://www.northwestmusicscene.net/wp-content/uploads/2017/03/Elliot-Smith-Either-Or-e1489518832483.jpg",
+					1997, album3));
+			
+			
 			
 			// username: user password: user      
 			urepository.save(new User("user",
